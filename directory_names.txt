@@ -1,5 +1,3 @@
-00_standard_form
-00_modified_form
 1_bootstrap-5.2.0-dist
 2_normalize
 3_textStyles
