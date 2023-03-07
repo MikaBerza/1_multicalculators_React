@@ -85,7 +85,8 @@ code {
   vertical-align: middle;
 }
 
-.main__counter-text,
+.main__counter-text-done,
+.main__counter-text-notDone,
 .main__filtering-text {
   width: 100%;
   font-weight: 600;
@@ -116,22 +117,13 @@ code {
   color: #696969;
 }
 
-/* .main__filtering-filter { */
-/* color: #828282; */
-/* width: 50%;
-  font-size: 14px;
-  border: var(--borderTwo);
-  border-radius: 8px; */
-/* убираем жирный бордер при клике */
-/* outline: none; */
-/* } */
-
 .main__numbered-list {
+  margin-top: 15px;
   padding: 0;
   border-radius: 10px;
   /* делаем скрол */
   list-style-type: none;
-  height: 420px;
+  height: 440px;
   overflow: auto;
 }
 
@@ -182,7 +174,9 @@ code {
   border: var(--borderTwo);
   /*автоматический перенос текста, чтобы текс 
   поместился в заданную ширину блока*/
-  word-wrap: break-word
+  word-wrap: break-word;
+  /* прозрачность */
+  opacity: 0.8;
 }
 
 /* когда происходит редактирование */
@@ -200,6 +194,14 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.main__list-item-text {
+  /* заданная ширина блока */
+  max-width: 96%;
+  /*автоматический перенос текста, чтобы текс 
+  поместился в заданную ширину блока*/
+  word-wrap: break-word;
 }
 
 input[type=checkbox] {
@@ -298,43 +300,64 @@ input[type=checkbox] {
   border: var(--borderTwo);
 }
 
+
 /*___Анимация, эффект сборки 
 элементов в реальном времени___*/
 .main__button,
 .main__input-search,
-.main__filtering-and-counter {
+.main__counter-indicator,
+.main__filtering-select {
   animation-duration: 3s;
-  animation-name: btn;
+  animation-name: controls;
 }
 
-@keyframes btn {
+@keyframes controls {
   from {
     margin-left: 100%;
-    width: 100%;
+    width: 0%;
   }
 
   to {
     margin-right: 100%;
     width: 100%;
-  }
-}
-
-.main__textarea {
-  animation-duration: 3s;
-  animation-name: trxtar;
-}
-
-@keyframes trxtar {
-  from {
-    margin-right: 100%;
-    width: 100%;
-  }
-
-  to {
-    margin-right: 0%;
-    width: 92%;
   }
 }
 
 /*___Анимация, эффект сборки 
 элементов в реальном времени___*/
+
+@media (max-width:1130px) {
+  .main__flex-container {
+    width: 100%;
+  }
+}
+
+/*когда экран меньше 540px, смещаем блок для ввода под первый блок для вывода*/
+@media (max-width:540px) {
+  .main__centre-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__section-one {
+    width: 80%;
+    margin: 15px;
+  }
+
+  .main__numbered-list {
+    height: 140px;
+  }
+
+  .main__section-two {
+    width: 100%;
+  }
+
+  .main__filtering-text,
+  .main__counter-text-done,
+  .main__counter-text-notDone {
+    text-align: center;
+    color: black;
+  }
+}

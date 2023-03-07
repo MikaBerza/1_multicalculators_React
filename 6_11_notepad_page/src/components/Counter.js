@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 //
 //
 //
+
+/*Заменил 'выполненные задачи/ невыполненные задачи' на просто 'выполненные,
+невыполненные' */
 function Counter({ counter, totalEntries }) {
   return (
     <div className='main__counter'>
-      <span className='main__counter-text'>
-        выполненные задачи-{counter}
-        {<br />}невыполненные задачи-
+      <span className='main__counter-text-done'>
+        выполненные-{counter}
+        {<br />}невыполненные-
         {totalEntries - counter}
       </span>
       <meter

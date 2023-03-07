@@ -7,6 +7,7 @@ function InputGroup({
   handleChangeTextarea,
   isEdit,
   chooseFunction,
+  name,
 }) {
   return (
     <>
@@ -15,7 +16,7 @@ function InputGroup({
       <div className='main__block-textarea'>
         <textarea
           className='main__textarea'
-          name=''
+          name={name}
           id=''
           rows='13'
           value={valTextarea}

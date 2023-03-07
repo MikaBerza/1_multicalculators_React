@@ -19,6 +19,7 @@ function OutputGroup({
     >
       <div className='main__list-item-block1'>
         <span
+          className='main__list-item-text'
           id={note.id}
           onDoubleClick={(event) => {
             editNote(event, index, note.id, note.checkbox);

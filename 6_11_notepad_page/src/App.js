@@ -26,6 +26,7 @@ function App() {
     // event.target.value - текущий текст textarea
     setValTextarea(event.target.value);
   }
+
   //___функция указывает на значение введенное в input
   function handleChangeInput(event) {
     // event.target - ссылка на DOM элемент input
@@ -222,6 +223,7 @@ function App() {
             handleChangeTextarea={handleChangeTextarea}
             isEdit={isEdit}
             chooseFunction={chooseFunction}
+            name={'postContent'}
           />
         </section>
       </div>
