@@ -197,7 +197,7 @@ function App() {
           {/*_______________Filtering-and-counter____________*/}
           <div className='main__filtering-and-counter'>
             <Counter counter={counter} totalEntries={notes.length} />
-            <Filter select={select} handleChangeSelect={handleChangeSelect} />
+            <Filter option={select} handleChangeSelect={handleChangeSelect} />
           </div>
           {/*_______________Output-group____________*/}
           <ul className='main__numbered-list'>
@@ -208,7 +208,7 @@ function App() {
                   note={note}
                   index={index}
                   editNote={editNote}
-                  handleChangeCheckbox={handleChangeCheckbox}
+                  onClickCheckbox={handleChangeCheckbox}
                   getNumberActiveCheckboxes={getNumberActiveCheckboxes}
                   deleteNoteElement={deleteNoteElement}
                 />

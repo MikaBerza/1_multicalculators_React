@@ -6,7 +6,7 @@ function OutputGroup({
   note,
   index,
   editNote,
-  handleChangeCheckbox,
+  onClickCheckbox,
   getNumberActiveCheckboxes,
   deleteNoteElement,
 }) {
@@ -31,7 +31,7 @@ function OutputGroup({
           id={note.id}
           type='checkbox'
           checked={note.checkbox}
-          onClick={handleChangeCheckbox}
+          onClick={onClickCheckbox}
           onChange={getNumberActiveCheckboxes}
         />
       </div>

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 //
 //
 //
-function Filter({ select, handleChangeSelect }) {
+function Filter({ option, handleChangeSelect }) {
   return (
     <div className='main__filtering'>
       <span className='main__filtering-text'>фильтрация</span>
       <select
         className='main__filtering-filter'
-        value={select}
+        value={option}
         onChange={handleChangeSelect}
       >
         <option defaultValue value='Все'>
