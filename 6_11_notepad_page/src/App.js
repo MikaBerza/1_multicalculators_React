@@ -44,7 +44,7 @@ function App() {
   //___функция добавляет запись в блокнот
   function addNote() {
     // добавляем если строка больше нуля и меньше 700
-    if (valTextarea.length > 0 && valTextarea.length < 700) {
+    if (valTextarea.trim().length > 0 && valTextarea.trim().length < 700) {
       const newNote = {
         id: v4(),
         text: valTextarea.trim(),
