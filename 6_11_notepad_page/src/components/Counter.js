@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 //
 //
 
-/*Заменил 'выполненные задачи/ невыполненные задачи' на просто 'выполненные,
-невыполненные' */
 function Counter({ counter, totalEntries }) {
+  const twentyPercent = 0.2;
+  const eightyPercent = 0.8;
+  const ninetyPercent = 0.9;
+
   return (
     <div className='main__counter'>
       <span className='main__counter-text-done'>
@@ -17,10 +19,10 @@ function Counter({ counter, totalEntries }) {
         className='main__counter-indicator'
         value={counter}
         min='0'
-        low={totalEntries * 0.2}
-        high={totalEntries * 0.8}
+        low={totalEntries * twentyPercent}
+        high={totalEntries * eightyPercent}
         max={totalEntries}
-        optimum={totalEntries * 0.9}
+        optimum={totalEntries * ninetyPercent}
       ></meter>
     </div>
   );
