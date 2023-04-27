@@ -1,4 +1,4 @@
->### Проекта - "1_multicalculators_React"
+>### Проект - "1_multicalculators_React"
 
 #### Сводная таблица названий приложений проекта
 
